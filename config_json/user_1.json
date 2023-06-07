@@ -1,0 +1,17 @@
+{
+    "config": {
+      "fetch": 11
+    },
+    "data": [
+      [40001, 2, "C_SunSpec_ID", "uint32", "Value = \"SunS\"(0x53756e53).Uniquely identifies this as a SunSpec MODBUS Map"],
+      [40003, 1, "C_SunSpec_DID", "uint16", "Value = 0x0001.Uniquely identifies this as a SunSpec Common Model Block"],
+      [40004, 1, "C_SunSpec_Length", "uint16", "65 = Length of block in 16 - bit registers"],
+      [40005, 16, "C_Manufacturer", "String(32)", "Value Registered with SunSpec = \"Solarxxxx \""],
+      [40021, 16, "C_Model", "String(32)", "SolarEdge Specific Value"],
+      [40045, 8, "C_Version", "String(16)", "SolarEdge Specific Value"],
+      [40053, 16, "C_SerialNumber", "String(32)", "SolarEdge Unique Value"],
+      [40069, 1, "C_DeviceAddress", "uint16", "MODBUS Unit ID"],
+      [40070, 1, "C_Pad", "uint16", "Pad"]
+      	 
+    ]
+}
