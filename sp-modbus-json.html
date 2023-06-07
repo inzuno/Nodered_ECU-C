@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    RED.nodes.registerType('sp-modbus',{
+        category: 'Voltaik',
+        color: '#fff665',
+        defaults: {
+			name: {value:"sp-modbus"},
+            host: {value:"192.168.0.10"},
+			port: {value:"502"},
+            poll: {value:"1000"},
+            device: {value: "se_inverter"}
+        },
+        inputs:0,
+        outputs:1,
+        icon: "bridge.png",
+        label: function() {
+            return this.name||"sp-modbus";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="sp-modbus">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-tag"></i> Host</label>
+        <input type="text" id="node-input-host" placeholder="Host">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-tag"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="Port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-poll"><i class="icon-tag"></i> Poller</label>
+        <input type="text" id="node-input-poll" placeholder="Poller">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device"><i class="icon-tag"></i> Device</label>
+        <select id="node-input-device">
+			<option value="se_inverter">Solar Edge Inverter</option>
+            <option value="em_300">EM 300 Power Meter</option>
+            <option value="ecu_c_v101">Apsystems ECU_C_v101</option>
+            <option value="ecu_c_v111">Apsystems ECU_C_v111</option>
+			<option value="ecu_c_v123">Apsystems ECU_C_v123</option>
+            <option value="user_1">Sunspec user defind 1</option>
+            <option value="user_2">Sunspec user defind 2</option>
+			<option value="user_3">Sunspec user defind 3</option>
+			
+        </select>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="lower-case">
+    <p>A simple node that fetches data from Sunspec modbus</p>
+</script>
